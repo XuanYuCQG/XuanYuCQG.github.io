@@ -1,146 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>CQG | CQG Web API Documentation</title>
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="This link to CQG.COM: CQG!
-First titlea first subtitile1$ hexo new &quot;My New CQG Post&quot;
-Second titleMore info: Writing">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CQG">
-<meta property="og:url" content="http://yoursite.com/2016/12/07/CQG/index.html">
-<meta property="og:site_name" content="CQG Web API Documentation">
-<meta property="og:description" content="This link to CQG.COM: CQG!
-First titlea first subtitile1$ hexo new &quot;My New CQG Post&quot;
-Second titleMore info: Writing">
-<meta property="og:updated_time" content="2016-12-07T14:54:40.202Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CQG">
-<meta name="twitter:description" content="This link to CQG.COM: CQG!
-First titlea first subtitile1$ hexo new &quot;My New CQG Post&quot;
-Second titleMore info: Writing">
-  
-    <link rel="alternative" href="/atom.xml" title="CQG Web API Documentation" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
-</head>
-<body>
-  <div id="container">
-    <div class="mobile-nav-panel">
-	<i class="icon-reorder icon-large"></i>
-</div>
-<header id="header">
-	<h1 class="blog-title">
-		<a href="/">CQG Web API Documentation</a>
-	</h1>
-	<nav class="nav">
-		<ul>
-			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
-			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
-			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
-		</ul>
-	</nav>
-	<div id="search-form-wrap">
-		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-	</div>
-</header>
-    <div id="main">
-      <article id="post-CQG" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/12/07/CQG/" class="article-date">
-  <time datetime="2016-12-07T14:49:23.000Z" itemprop="datePublished">2016-12-07</time>
-</a>
-		</span>
-		<span class="meta-elements author">Xuan Yu</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 class="article-title entry-title" itemprop="name">
-      CQG
-    </h1>
-  
+include _views/post
+include _views/menu
+extends _views/main
 
-	</header>
-	<div class="entry-content">
-		
-    	<p>This link to CQG.COM: <a href="www.cqg.com">CQG</a>!</p>
-<h2 id="First-title"><a href="#First-title" class="headerlink" title="First title"></a>First title</h2><h3 id="a-first-subtitile"><a href="#a-first-subtitile" class="headerlink" title="a first subtitile"></a>a first subtitile</h3><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New CQG Post"</span></div></pre></td></tr></table></figure>
-</code></pre><h2 id="Second-title"><a href="#Second-title" class="headerlink" title="Second title"></a>Second title</h2><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+block main
+  +post(page, 'post')
+  if config.disqus_shortname && page.comments
+    div.comments
+      div#disqus_thread
+        noscript.
+          Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
 
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-			</span>
-		</div>
-	</footer>
-	
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2016/12/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
-  
-</nav>
+block head
+  title
+    = page.title + ' - ' + config.title
 
-  
-</article>
-
-
-
-
-    </div>
-    <div class="mb-search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:yoursite.com">
-  </form>
-</div>
-<footer id="footer">
-	<h1 class="footer-blog-title">
-		<a href="/">CQG Web API Documentation</a>
-	</h1>
-	<span class="copyright">
-		&copy; 2016 Xuan Yu<br>
-		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
-		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-	</span>
-</footer>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-  </div>
-</body>
-</html>
+block menu
+  +menu('post')
